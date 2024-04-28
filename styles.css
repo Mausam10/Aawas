@@ -1,0 +1,142 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+ font-family: Arial, sans-serif;
+}
+
+.main {
+ width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0.7) 20%), url(images/house1.jpg);      /*background image add gareko */
+ background-position: center;
+ background-size: cover;
+ height: 100vh;
+}
+
+.navbar {
+ width: 100%;
+ max-width: 1600px;
+ height: 100px;
+ margin: 0 auto;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 20px;
+ background-color: rgba(7, 5, 5, 0.393);
+}
+
+.icon img {
+ width: 140px;
+ height: auto;
+}
+
+.menu ul {
+ display: flex;
+ list-style: none;
+}
+
+.menu ul li {
+ margin-left: 60px;
+}
+
+.menu ul li a {
+ text-decoration: none;
+ color: #fff;
+ font-weight: bold;
+ transition: color 0.4s ease-in-out;
+}
+
+.menu ul li a:hover {
+ color: #ff7200;
+}
+
+.content {
+ width: 100%;
+ max-width: 1200px;
+ margin: 0 auto;
+ text-align: center;
+ padding-top: 100px;
+ color: #fff;
+}
+
+.content h1 {
+ font-size: 50px;
+ letter-spacing: 2px;
+ margin-bottom: 20px;
+}
+
+.content h1 span {
+ color: #ff7200;
+ font-size: 65px;
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 600px) {
+ .navbar {
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .icon img {
+   width: 100px;
+ }
+
+ .menu {
+   margin-top: 20px;
+ }
+
+ .menu ul {
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .menu ul li {
+   margin: 10px 0;
+ }
+
+ .content {
+   padding-top: 50px;
+ }
+
+ .content h1 {
+   font-size: 30px;
+ }
+
+ .content h1 span {
+   font-size: 35px;
+ }
+}
+
+@media only screen and (min-width: 601px) {
+ .navbar {
+   height: 100px;
+   justify-content: space-between;
+ }
+
+ .icon img {
+   width: 140px;
+ }
+
+ .menu ul {
+   flex-direction: row;
+ }
+
+ .menu ul li {
+   margin-left: 30px;
+ }
+
+ .content {
+   padding-top: 100px;
+ }
+
+ .content h1 {
+   font-size: 50px;
+ }
+
+ .content h1 span {
+   font-size: 65px;
+ }
+}
