@@ -361,14 +361,41 @@ include("engine.php");
 
 
 
-    const areaOptions = {
-        "1": ["Archalbot Area", "Bagar Area","Pn campus area"],
-        "17": ["Birauta chok Area", "Ram mandir Area", "Gharipatan area", "Dampside area", "Chorepatan area", "Sangrila area", "Hotel Grandee area", " Balodaya area"],
-        "3": ["Nadipur area", "Kanya campus area", "Palikechok"],
-        "7": ["Janapriya area", "La grandee Area", "Rantnachok Area" ,"Masbar Area"],
-        "15": ["HariyaKharka area", "Sos Area", "Nayagau Area", "Nayagau Church Area","Kolpatan","Tutunga Area","Ban campus area"],
-        "16": ["WRC area", "GCES Area", "Batulechau Area"]
-    };
+const areaOptions = {
+    "1": ["Bagar", "Pn campus", "Ki Singpool", "Simpani", "taxichowk", "Tundikhel", "Bhimkali Patan", "Deep Housing"],
+    "2": ["Miruwa", "Bhairab Tol", "Guhaeshori Marg", "Mitra Marg", "Mohriya Tol"],
+    "3": ["Nadipur", "Kopildunga", "Mahendrapool"],
+    "4": ["Gairapatan", "Chipledunga", "Panti Galli", "Shiddhartha Chwok"],
+    "5": ["Malepatan", "Dhunge Khola", "Gadatantra Chok", "Shantinagar Chok", "Doke Chok", "Prasyang", "Zero Kilometer"],
+    "6": ["Baidam", "Santi Patan", "ShriKrishna Tole"],
+    "7": ["Masbar", "Baral chok", "Ghari khet", "Pokhari Patan Tol", "Pragati Tol", "Mulijuli tole", "Sivam Tol"],
+    "8": ["Shrijana Chowk", "Bhage Tol", "Indrapuri Tol", "Gyankunj Tol", "RatnaChowk"],
+    "9": ["Naya Bazar", "prithivichowk", "Santiban Batika"],
+    "10": ["Budha chowk", "Kalika Chowk", "Machhapuchhre tole", "Milan Tole", "Sambridhi Tole", "Indra Chowk", "Pipal Dali Chowk"],
+    "11": ["Ranipauwa", "RamGhat Area", "Bhanu chowk"],
+    "12": ["Sital Devi", "Bhrikuti Tole", "AmarsingChowk", "Hospital Line", "RaniPauwa"],
+    "13": ["Miya Patan", "Bhadarikali Tole", "Khaukhola", "Kasari", "Arba", "Kamlpokhari", "Bajapatan"],
+    "14": ["Majheripatan", "Kajipokhari", "Chinnedanda", "Sagarmatha Chowk", "Suryodaya", "Radhakrishna Tole", "Shivashakti Tole"],
+    "15": ["Rambazar", "ST.Mary Chowk", "Hariyo Kharkha", "Dunga Sau","church Area", "Belbot", "Kolpata"],
+    "16": ["Batulechaur", "Maidan", "Gharmi", "Amala Bisaune", "Armalkot", "Pashchimanchal Campus Area"],
+    "17": ["DamSide", "Birauta", "RatoPAiro", "Om Santi Chowk","Ram mandir","Power House","Devi's fall", "Tibetan Refugee Camp"],
+    "18": ["Sarangkot", "Chisakhola Basti", "Methlang", "Bhakunde", "Gyarjati", "Toripani"],
+    "19": ["Lamachaur", "Puranchaur", "Tallakot", "Chitapani", "Lampata", "Beshi Chwok", "Baura"],
+    "20": ["Bhalam", "Aatighar", "Bisauna"],
+    "21": ["Nirmal Pokhari", "Phoksing", "Bayeli", "Pokharelthok"],
+    "22": ["Pumdi Bhumdi", "KhadeKhola", "PumdiKot", "Dunge Pani", "Peace Pagoda"],
+    "23": ["Chapakot", "Bhadaure", "Thula Chaur", "Thulakhet", "Panchase Bhanjyang", "Harpankot", "Ghatichhina"],
+    "24": ["Kaskikot", "Kaski", "Ratamata Tole", "Pame"],
+    "25": ["Hemja", "Milan Chwok", "Buddha Chok Hemja"],
+    "26": ["Budhi Bazar", "kalika Chok", "Dhudhpokhari Tole"],
+    "27": ["Tal Chowk", "Lekhnath", "Pargati Tole", "Sundari Tole", "Ekata Tole"],
+    "28": ["Kalika", "Thulakot", "Kholabesi", "Kiwarigaun", "Modothan", "SaureBhanjyang"],
+    "29": ["Bhandardhik", "Patneri", "Siddhartha Budhha Tole", "Budhibazzar"],
+    "30": ["Khudi", "Sishuwa", "Power House", "Dahar Chok", "PU Chok"],
+    "31": ["Begnas", "Lakuri Tol", "Pachabhaiya", "Lapsidanda", "Unnati Tol"],
+    "32": ["Gagangauda", "Majuya", "Ghauri tol", "Rajako Chautara", "Satmuhane", "Deurali Phedi"],
+    "33": ["Bharat Pokhari", "Chisapani", "Upllopudi", "Chauhadi", "Lamgadi", "Apukaseri"]
+};
 
     document.getElementById('ward_no').addEventListener('change', function() {
         var wardNo = this.value;
