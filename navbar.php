@@ -45,7 +45,7 @@ header {
   width: 100%;
   /* background-color: rgb(246, 210, 241); */
   height: 80px;
-  max-width: 1800px;
+  max-width: 2000px;
   margin: 0;
   display: flex;
   align-items: center;
@@ -133,8 +133,8 @@ ul li a:hover {
                 </ul>
                  <!--Login Button in Navbar  -->
                  <div class="btns">
-                 <a href="login_options.php" class="action_btn">Register</a>
-                 <a href="login_options.php" class="action_btn">Login</a>
+                 <a href="register.php" class="action_btn">Register</a>
+                 <a href="login.php" class="action_btn">Login</a>
                  </div>
                 
             </div>

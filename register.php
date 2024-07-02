@@ -5,8 +5,8 @@ include("navbar.php");
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
 <div class="container">
-  <h3 style="font-weight: bold; text-align: center;">Owner Register</h3><hr><br>
-  <form method="POST" action="owner-operation.php" enctype="multipart/form-data" onsubmit="return Validate()">
+  <h3 style="font-weight: bold; text-align: center;">Enter Your Details</h3><hr><br>
+  <form method="POST" action="register-operation.php" enctype="multipart/form-data" onsubmit="return Validate()">
     <div class="form-group">
       <label for="full_name">Full Name:</label>
       <input type="text" class="form-control" id="full_name" placeholder="Enter Full Name" name="full_name" required>
@@ -40,11 +40,17 @@ include("navbar.php");
       <input type="text" class="form-control" id="address" placeholder="Enter Address" name="address" required>
     </div>
     <div class="form-group">
+      <label for="role">Role:</label>
+      <select class="form-control" name="role" required>
+        <option value="Owner">Owner</option>
+        <option value="Rental">Rental</option>
+      </select>    
+    </div>
+    <div class="form-group">
       <label for="id_type">Type of ID:</label>
       <select class="form-control" name="id_type" required>
         <option>Citizenship</option>
         <option>Driving Licence</option>
-        <option>Voter Card</option>
       </select>
     </div>
     <div class="form-group">
@@ -58,7 +64,7 @@ include("navbar.php");
     <hr>
     <center><button id="submit" name="owner_register" class="btn btn-primary btn-block " style="background-color:#b16bea">Register</button></center><br>
     <div class="form-group text-right">
-      <label class="">Register as a <a href="rental-register.php" style="color:#b16bea">Rental</a>?</label><br>
+      <label class="">Already have account<a href="login.php" style="color:#b16bea">Log In</a>?</label><br>
     </div><br><br>
   </form>
 </div>
@@ -85,42 +91,52 @@ include("navbar.php");
         var passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{7,}$/;
         var phoneRegex = /^\d{10}$/;
         var valid = true;
+        // validate name
         if (!nameRegex.test(name)) {
             document.getElementById("nameError").innerText = "Name must contain only alphabets.";
+            document.getElementById("full_name").style.borderColor = "red";
             valid = false;
         } else {
             document.getElementById("nameError").innerText = "";
-            document.getElementById("password1").style.borderColor = "green";
+            document.getElementById("full_name").style.borderColor = "";
         }
+        // validate email
         if (!emailRegex.test(email)) {
             document.getElementById("emailError").innerText = "Invalid email format.";
+            document.getElementById("email").style.borderColor = "red";
             valid = false;
         } else {
             document.getElementById("emailError").innerText = "";
-            document.getElementById("password1").style.borderColor = "green";
+            document.getElementById("email").style.borderColor = "";
         }
+        // Validate Password
         if (!passwordRegex.test(password)) {
             document.getElementById("passwordError").innerText = "Password must be at least 7 characters long, contain one capital letter, one number, and one special character.";
             document.getElementById("password1").style.borderColor = "red";
             valid = false;
         } else {
-          document.getElementById("password1").style.borderColor = "green";
+      
             document.getElementById("passwordError").innerText = "";
-            document.getElementById("password1").style.borderColor = "green";
+            document.getElementById("password1").style.borderColor = "";
         }
+        // Confirm password
         if (password !== confirmPassword) {
             document.getElementById("confirmPasswordError").innerText = "Passwords do not match.";
+            document.getElementById("password2").style.borderColor = "red";
             valid = false;
         } else {
-          document.getElementById("password1").style.borderColor = "green";
+          
             document.getElementById("confirmPasswordError").innerText = "";
+            document.getElementById("password2").style.borderColor = "";
         }
+        // validate Phone No.
         if (!phoneRegex.test(phone)) {
             document.getElementById("phoneError").innerText = "Phone number must be equal to 10 digits.";
+            document.getElementById("phone_no").style.borderColor = "red";
             valid = false;
         } else {
             document.getElementById("phoneError").innerText = "";
-            document.getElementById("password1").style.borderColor = "green";
+            document.getElementById("phone_no").style.borderColor = "";
         }
         return valid;
     }

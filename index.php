@@ -30,7 +30,7 @@ if (!$db) {
                 <li><a href="#">Blog</a></li>
                 </ul>
                  <!--Login Button in Navbar  -->
-                <a href="login_options.php" class="action_btn">Login</a>
+                <a href="login.php" class="action_btn">Login</a>
             </div>
    </div>
 </header>
@@ -39,7 +39,7 @@ if (!$db) {
         <div class="main">
             <h1>Welcome to <span class="purple">Aawas!</span></h1>
             <h2>Find Your Next Space To Live.</h2>
-            <a href="register_options.php" class="action_btn">Sign Up</a>
+            <a href="register.php" class="action_btn">Sign Up</a>
         </div>
     </section>
 
@@ -47,7 +47,7 @@ if (!$db) {
     <!--Section 2 - Sales -->
     <section class="sales container" id="sales">
     <!-- Box 1 login options -->
-    <a href="login_options.php">       
+    <a href="login.php">       
         <div class="box">
             <i class='bx bx-user'></i>
             <h3>Make Your Dream True</h3>
