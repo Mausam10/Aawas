@@ -9,6 +9,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aawas.com</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
         body, html {
             top: 20px;
@@ -283,7 +286,7 @@ ul li {
 ul li a {
   text-decoration: none;
   color: #313638;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: bolder;
 }
 
@@ -388,6 +391,52 @@ ul li a:hover {
   color: var(--bg-color);
   background: var(--main-color);
 }
+/* Style the dropdown button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-menu a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Style the dropdown button when the dropdown is active */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
 
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
@@ -403,8 +452,18 @@ ul li a:hover {
                 <li><a href="contactus.php">Contact</a></li>
                 <li><a href="#">Blog</a></li>
                 </ul>
-                 <!--Logout Button in Navbar  -->
-                <a href="logout.php" class="action_btn">Logout</a>
+                <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> My Profile
+            <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="profile.php">Profile</a></li>
+            <li><a href="booked-property.php">Booked Property</a></li>
+            <li><a href="logout.php">Logout</a></li>
+          </ul>
+        </li>
+
+
+
             </div>
    </div>
     </header>

@@ -64,7 +64,7 @@ ul li {
 ul li a {
   text-decoration: none;
   color: #313638;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: bolder;
 }
 
@@ -94,7 +94,7 @@ ul li a:hover {
   border: none;
   outline: none;
   border-radius: 20px;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
   margin: 10px;
@@ -131,11 +131,25 @@ ul li a:hover {
                 <li><a href="aboutus.php">About</a></li>
                 <li><a href="contactus.php">Contact</a></li>
                 </ul>
-                 <!--Login Button in Navbar  -->
-                 <div class="btns">
+                <ul class="nav navbar-nav navbar-right">
+        <?php if(isset($_SESSION["email"]) && !empty($_SESSION['email'])) { ?>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> My Profile
+            <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="profile.php">Profile</a></li>
+            <li><a href="booked-property.php">Booked Property</a></li>
+            <li><a href="logout.php">Logout</a></li>
+          </ul>
+        </li>
+        <?php } else { ?>
+          <div class="btns">
                  <a href="register.php" class="action_btn">Register</a>
                  <a href="login.php" class="action_btn">Login</a>
                  </div>
+        <?php } ?>
+      </ul>
+               
                 
             </div>
    </div>

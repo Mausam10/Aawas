@@ -320,6 +320,7 @@ ul li a:hover {
                 <input type="submit" name="owner_login" value="Login" class="button" style="border-radius: 10px;">
             </form>
             <a href="register.php" class="btn">Register now</a>
+            <a href="forgot/index.php">Forgot Password ?</a>
         </div>
         <div class="login-image" style="margin-left: 200px;">
             <video loop height="500px" width="500px" " autoplay>
